@@ -1,0 +1,352 @@
+/* Estilo General de la Página */
+body {
+  background-color: #141414; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+  background-color: #f9f9f9; /* Fondo claro */
+  color: #333333;
+}
+
+/* Navbar Estilo Netflix */
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  background-color: #e50914;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #f40612;
+  transform: scale(1.05);
+}
+
+.light-mode .navbar {
+  background-color: #f0f0f0; /* Fondo claro para navbar */
+}
+
+.light-mode .nav-links a {
+  color: #333333; /* Texto oscuro para links en modo claro */
+}
+
+/* Switch de Modo Oscuro/Claro */
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #e50914;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Sección de Inicio con Imagen de Fondo y Superposición */
+.home-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('/images/upch-background.jpg'); /* Imagen de fondo de la universidad */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-content h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.welcome-content p {
+  font-size: 1.5rem;
+  color: #eeeeee;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.light-mode .welcome-content h1,
+.light-mode .welcome-content p {
+  color: #333333; /* Cambia el color del texto en modo claro */
+  text-shadow: none;
+}
+
+/* Sección Sobre Mí */
+.about-section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  color: #ffffff;
+}
+
+.about-section h1, .about-section h2, .about-section h3 {
+  color: #e50914;
+}
+
+.light-mode .about-section h1,
+.light-mode .about-section h2,
+.light-mode .about-section h3 {
+  color: #333333; /* Cambia el color del texto en modo claro */
+}
+
+.personal-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.personal-info li {
+  margin-bottom: 0.5rem;
+}
+
+.personal-info a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+.personal-info a:hover {
+  text-decoration: underline;
+}
+
+.light-mode .personal-info a {
+  color: #333333; /* Cambia el color de los enlaces en modo claro */
+}
+
+/* Sección de Portafolio */
+.portfolio-section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.portfolio-section h1 {
+  color: #e50914;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.project {
+  background-color: #222;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.project h2 {
+  color: #e50914;
+  font-size: 2rem;
+}
+
+.project p {
+  margin: 1rem 0;
+  color: #cccccc;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+}
+
+.project a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.light-mode .project {
+  background-color: #f0f0f0; /* Fondo claro para proyectos en modo claro */
+  color: #333333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.light-mode footer {
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+.light-mode footer a {
+  color: #333333;
+}
+
+/* Sección de Certificados y CV */
+.cv-section {
+  padding: 4rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.cv-section h1 {
+  font-size: 3rem;
+  color: #e50914;
+}
+
+.cv-section p {
+  font-size: 1.5rem;
+  color: #cccccc;
+}
+
+.light-mode .cv-section h1, 
+.light-mode .cv-section p {
+  color: #333333; /* Cambia el color del texto en modo claro */
+}
+
+/* Estilo de Contacto */
+.contact-section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  color: #ffffff;
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  color: #e50914;
+}
+
+.contact-section p {
+  margin: 1rem 0;
+  color: #cccccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #333;
+  color: #ffffff;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #e50914;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #f40612;
+}
+
+.light-mode .contact-section,
+.light-mode .contact-form input,
+.light-mode .contact-form textarea {
+  background-color: #f9f9f9;
+  color: #333333; /* Cambia el color del texto en modo claro */
+}

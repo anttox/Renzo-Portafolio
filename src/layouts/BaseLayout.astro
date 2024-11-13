@@ -1,0 +1,23 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM3o5AXRl4O6BiT1FO5IQlZ7ql4YH25i/tQScH4" crossorigin="anonymous">
+  <title>Renzo Antonio Vilca Loayza - Portafolio</title>
+</head>
+<body>
+  <Navbar />
+  <main class="main-content fade-in">
+    <slot /> <!-- Contenido de cada página se renderiza aquí -->
+  </main>
+  <Footer />
+  <script src="/scripts/main.js" is:inline></script> <!-- Para funcionalidad como Dark Mode -->
+</body>
+</html>
+

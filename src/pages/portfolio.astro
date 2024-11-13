@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PortfolioItem from '../components/PortfolioItem.astro';
+---
+
+<BaseLayout>
+  <section class="portfolio-section">
+    <h1>Mis Proyectos</h1>
+    <p>A continuación se muestran algunos de los proyectos destacados:</p>
+    
+    <!-- Proyecto 1: Módulo de Autenticación y Autorización -->
+    <PortfolioItem 
+      title="Diseño y Desarrollo de un Módulo de Autenticación y Autorización"
+      description="Este proyecto implementa un sistema completo de autenticación y autorización para una aplicación web. Utiliza JWT (JSON Web Tokens) para la gestión de sesiones de usuarios y aplica control de acceso basado en roles (RBAC) para definir permisos específicos. La estructura del proyecto sigue patrones de diseño como Singleton y Facade, y está diseñado para ser modular y escalable."
+      features={[
+        "Autenticación de usuarios mediante JWT.",
+        "Control de acceso basado en roles (RBAC).",
+        "Pruebas unitarias con Jest para verificar funcionalidad.",
+        "Estructura modular y diseño orientado a patrones (Singleton y Facade)."
+      ]}
+      githubLink="https://github.com/anttox/Proyecto-Autenticacion-Autorizacion"
+      image="/images/proyecto-autenticacion.jpg"
+    />
+
+    <!-- Proyecto 2: Sistema de Detección de Intrusos en Redes -->
+    <PortfolioItem 
+      title="Sistema de Detección de Intrusos en Redes"
+      description="Este proyecto consiste en el desarrollo de un sistema de detección de intrusos (IDS) para redes informáticas. El sistema es capaz de capturar y analizar el tráfico de red en tiempo real para identificar actividades sospechosas. Emplea técnicas de machine learning y análisis de paquetes de red utilizando herramientas como Scapy y PyShark."
+      features={[
+        "Captura de paquetes de red en tiempo real.",
+        "Análisis de tráfico de red para detección de intrusos.",
+        "Implementación de técnicas de machine learning para detección de patrones sospechosos.",
+        "Configuración de entorno con Scapy y PyShark."
+      ]}
+      githubLink="https://github.com/anttox/Proyecto-Deteccion-Intrusos"
+      image="/images/proyecto-intrusos.jpg"
+    />
+
+    <!-- Proyecto 3: Amazon ELB - Auto Scaling -->
+    <PortfolioItem 
+      title="Amazon ELB - Auto Scaling"
+      description="En este proyecto se configura Amazon Elastic Load Balancing (ELB) y Auto Scaling para manejar la carga de servidores web. Se implementa un balanceador de carga utilizando la CLI de AWS, junto con políticas de escalamiento automático que garantizan la disponibilidad y el rendimiento del sistema frente a variaciones de tráfico."
+      features={[
+        "Configuración de Amazon Elastic Load Balancer (ELB).",
+        "Implementación de Auto Scaling para escalar instancias según demanda.",
+        "Integración con Amazon Cloud Watch para monitoreo de tráfico.",
+        "Balanceo de carga para distribución óptima del tráfico."
+      ]}
+      githubLink="https://github.com/anttox/Amazon-ELB-Auto-Scaling"
+      image="/images/amazon-elb.jpg"
+    />
+
+  </section>
+</BaseLayout>

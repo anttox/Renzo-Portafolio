@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/portfolio">Portfolio</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/cv">Certificados y CV</a></li>
+    <li><button id="toggle-dark-mode" class="dark-mode-btn">🌙 / ☀️</button></li>
+  </ul>
+</nav>
+<script>
+  document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
